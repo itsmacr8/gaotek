@@ -1,5 +1,11 @@
 # My journey of [GAOTek Inc.](https://www.linkedin.com/company/gao-tek-inc-/)
 
+## Table of contents
+
+- [Task 1: Creating an Online Shop Page](#task-1-creating-an-online-shop-page)
+- [Task 2: Enhance the Single Product Page](#task-2-enhance-the-single-product-page)
+- [Task 3: The Carousel Transformation](#task-3-the-carousel-transformation)
+
 ## Task 1: Creating an Online Shop Page
 
 The first task involves setting up a shop page for my online store. I've established the website on my local host using [XAMPP](https://www.apachefriends.org/download.html). I download and activate [Astra](https://wpastra.com/) theme and use started template.
@@ -225,7 +231,166 @@ WooCommerce - Product - Table (CSS)
 }
 ```
 
+## Task 3: The Carousel Transformation
+
+Imagine walking into an art gallery, where each painting is a product thumbnail. Now, imagine that instead of walking from painting to painting, you could simply press a button and the paintings would come to you, one after another. That's the magic we're about to create in this task.
+
+Our first step is to add some custom PHP code. This will conjure up a pair of buttons - one for the previous image and one for the next - right after the thumbnail images.
+
+But we're not quite satisfied with ordinary buttons. We want something sleeker, more elegant. So, we summon the power of the Font Awesome plugin to transform these buttons into stylish arrows. Then, like an interior designer adjusting the placement of a piece of furniture, we move these arrow buttons to the perfect spot that suits our design needs.
+
+Now, we face a challenge. There are too many thumbnail images - it's overwhelming. So, we decide to limit the number of visible thumbnail images to just four, tucking the rest out of sight. It's like having a private collection of paintings in the back room.
+
+Finally, we breathe life into the arrow buttons. With a click of functionality, these buttons can now dynamically bring forth the next image or take you back to the previous one when clicked.
+
+And voila! We've transformed our WooCommerce Product Thumbnails into a dynamic carousel.
+![WooCommerce Product Thumbnails dynamic carousel](./assets/task-3/thumbnail-slider.png 'WooCommerce Product Thumbnails dynamic carousel')
+
+Enable arrow for product thumbnail slider (php)
+
+```php
+//Filter WooCommerce Flexslider options - Add Navigation Arrows
+add_filter( 'woocommerce_single_product_carousel_options', 'sf_update_woo_flexslider_options' );
+function sf_update_woo_flexslider_options( $options ) {
+    $options['directionNav'] = true;
+    return $options;
+}
+```
+
+Hide Previous and Next default label and add new icon with font awesome
+
+```css
+a.flex-next, a.flex-prev {
+  visibility: hidden;
+}
+
+/* Set height so that it displays four image and hide other images */
+.woocommerce-product-gallery .flex-control-thumbs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 590px;
+  height: 110px;
+}
+
+/* Set the direction of arrows*/
+ul.flex-direction-nav {
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+}
+
+/* set position of previous arrow*/
+li.flex-nav-prev {
+  position: absolute;
+  bottom: 40px;
+  left: -50px;
+}
+
+/* set position of next arrow*/
+li.flex-nav-next {
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+}
+
+/* next arrow appear */
+a.flex-next::after {
+  visibility: visible;
+  content: '\f105';
+  font-family: 'Font Awesome 5 Free';
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* previous arrow appear*/
+a.flex-prev::before {
+  visibility: visible;
+  content: '\f104';
+  font-family: 'Font Awesome 5 Free';
+  margin-top: 0px;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ul.flex-direction-nav li a {
+  color: #ccc;
+}
+
+ul.flex-direction-nav li a:hover {
+  text-decoration: none;
+}
+
+ul.flex-direction-nav li a:hover {
+  text-decoration: none;
+}
+
+.flex-control-nav {
+  top: 0px;
+}
+```
+
+WooCommerce - Product - Image - Magnify glass (CSS)
+
+```css
+.woocommerce-js div.product div.images .woocommerce-product-gallery__trigger {
+  right:4.5em
+}
+```
+
+WooCommerce - Product - Image Section - Thumbnail Slider (JS)
+
+```js
+// scroll the images through images index
+const updateCarousel = (selectedImgIndex, lastImgIndex) => {
+    let indexOfImgToScroll = selectedImgIndex - 3;
+    if (selectedImgIndex < 3 || lastImgIndex <= 3) indexOfImgToScroll = -1;
+    else if (selectedImgIndex === lastImgIndex) indexOfImgToScroll = indexOfImgToScroll-1;
+
+    document.querySelectorAll(".flex-control-thumbs li").forEach((li, i) => {
+        if (i <= indexOfImgToScroll) {li.style.transform = 'translateX(-150px)'; li.style.display='none';}
+        else {li.style.transform = 'translateX(0)'; li.style.display='list-item';}
+        li.style.transition = 'transform 0.4s linear';
+    });
+};
+
+// Mutation observer is used to keep the record of active images
+// and change the image accordingly
+document.addEventListener("DOMContentLoaded", (event) => {
+    setTimeout(() => {
+        let observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutationRecord) => {
+                if (mutationRecord.target.className === "flex-active") {
+                    const allElements = mutationRecord.target.parentNode.parentNode.children;
+                    const targetedElement = mutationRecord.target.parentNode;
+                    const indexOfTargetedElement = Array.from(allElements).indexOf(targetedElement);
+                    const lastElementIndex = document.querySelectorAll(".flex-control-thumbs li").length - 1;
+
+                    updateCarousel(indexOfTargetedElement, lastElementIndex);
+                }
+            });
+        });
+
+        document.querySelectorAll(".flex-control-thumbs li img").forEach((img, i) => {
+            observer.observe(img, {
+                attributes: true,
+                attributeFilter: ['style', 'class'],
+            });
+        });
+    }, 0);
+});
+```
+
+Prerequisites:
+
+- Font Awesome plugin
+- WPCode Lite by WPCode
+
 References:
 
 - [Task 1: Creating an Online Shop Page](https://resourcesone.blogspot.com/2023/12/design-stunning-woocommerce-shop.html)
 - [Task 2: Enhance the Single Product Page](https://resourcesone.blogspot.com/2023/12/captivating-woocommerce-product-page.html)
+- [Task 3: The Carousel Transformation](https://resourcesone.blogspot.com/2023/12/blog-post_26.html)
