@@ -5,6 +5,8 @@
 - [Task 1: Creating an Online Shop Page](#task-1-creating-an-online-shop-page)
 - [Task 2: Enhance the Single Product Page](#task-2-enhance-the-single-product-page)
 - [Task 3: The Carousel Transformation](#task-3-the-carousel-transformation)
+- [Task 4: Crafting the Perfect Contact Form](#task-4-crafting-the-perfect-contact-form)
+
 
 ## Task 1: Creating an Online Shop Page
 
@@ -388,6 +390,24 @@ Prerequisites:
 
 - Font Awesome plugin
 - WPCode Lite by WPCode
+
+## Task 4: Crafting the Perfect Contact Form
+
+Imagine you're a skilled artisan, and your craft is creating contact forms. Your tools are the Contact Form 7 plugin and the Contact Form CFDB7.
+
+With these tools in hand, you begin your work. You shape the form using the syntax provided by Contact Form 7, like a sculptor working with a block of marble. Each field, each button, each element is carefully carved out, following the blueprint provided by the plugin's official documentation.
+
+But your work doesn't stop there. You then style the form, tailoring it to fit your specific needs. It's like painting the sculpture, adding color and life to the previously blank canvas.
+
+And finally, you ensure that every piece of user data entered into the form is safely stored with the help of Contact Form CFDB7. It's like adding a protective varnish to your sculpture, preserving it for the future.
+
+And there you have it - a beautifully crafted, functional, and secure contact form.
+![Crafting the Perfect Contact Form completed task](./assets/task-4/contact-form-part-1.png 'Crafting the Perfect Contact Form completed task')
+
+Prerequisites:
+
+- Contact Form 7 by Takayuki Miyoshi
+- Contact Form CFDB7 by Arshid
 
 References:
 
