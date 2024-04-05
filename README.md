@@ -6,8 +6,8 @@
 - [Task 2: Enhance the Single Product Page](#task-2-enhance-the-single-product-page)
 - [Task 3: The Carousel Transformation](#task-3-the-carousel-transformation)
 - [Task 4: Crafting the Perfect Contact Form](#task-4-crafting-the-perfect-contact-form)
-- [Task 5: The Magic of Live AJAX WooCommerce Product Search](#task-5-the-magic-of-live-ajax-woocommerce-product-search)
-
+- [Task 5: The Art of Crafting a Custom Contact Form](#task-5-the-art-of-crafting-a-custom-contact-form)
+- [Task 6: The Magic of Live AJAX WooCommerce Product Search](#task-6-the-magic-of-live-ajax-woocommerce-product-search)
 
 ## Task 1: Creating an Online Shop Page
 
@@ -928,8 +928,7 @@ Notes: Not valid syntax
 
 ```
 
-
-## Task 5: The Magic of Live AJAX WooCommerce Product Search
+## Task 6: The Magic of Live AJAX WooCommerce Product Search
 
 Imagine being a magician, and your magic trick is to conjure up a live AJAX WooCommerce product search. But there's a twist - you have to perform this trick without using any plugins, only with the power of PHP code.
 
