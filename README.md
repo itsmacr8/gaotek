@@ -412,7 +412,7 @@ Prerequisites:
 
 ## Task 5: The Art of Crafting a Custom Contact Form
 
-Imagine you're a skilled artisan, tasked with crafting a unique contact form. We got a blueprint by a YouTuber. This blueprint isn't for a building or a machine, but for a contact form. Your task is to bring this design to life. Your tools? Not the usual HTML code, but the syntax of Contact Form 7.
+Imagine you're a skilled artisan, tasked with crafting a unique contact form. We got a blueprint by a YouTuber. This blueprint isn't for a building or a machine, but for a contact form. **Your task is to bring this design to life in a way that is independent of both the browser and the theme.** Your tools? Not the usual HTML code, but the syntax of Contact Form 7.
 
 This form isn't just any form - it's a custom design. The default design offered by the browser is too ordinary, too plain. So, you roll up your sleeves and get creative. You redesign the HTML select elements, the radio buttons, and the checkboxes, transforming them into something unique. It's like being an architect, reshaping the landscape of your form.
 
@@ -423,6 +423,8 @@ But your task doesn't end there. This form has to be a chameleon, able to adapt 
 And of course, it should look the same in all browsers, a testament to its adaptability and resilience.
 
 And so, you embark on this journey of crafting a custom contact form, turning a YouTuber's design into a functional reality. It's a challenging task, but one that you're more than capable of handling. After all, you're not just any artisan - you're a master of your craft.
+
+Contact form 7 syntax elements
 
 ```sh
 <label for="cu-first-name">First name</label>
@@ -457,6 +459,8 @@ And so, you embark on this journey of crafting a custom contact form, turning a 
 
 [submit class:btn-primary "Submit"]
 ```
+
+Contact form (CSS)
 
 ```css
 :root {
