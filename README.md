@@ -464,74 +464,80 @@ Contact form (CSS)
 
 ```css
 :root {
-  --white: hsl(0, 0%, 100%);
-  --lighter-gray: hsl(201, 100%, 96%);
-  --light-gray: hsl(0, 0%, 80%);
-  --dark-gray: hsl(0, 0%, 65%);
-  --darker-gray: hsl(0, 0%, 20%);
-  --primary-light: hsl(201, 100%, 81%);
-  --primary: hsl(200, 100%, 61%);
-  --primary-dark: hsl(201, 100%, 36%);
-  --shadow: hsla(0, 0%, 0%, 0.1);
+  font-size: 100%;
+  --cf7-white: hsl(0, 0%, 100%);
+  --cf7-lighter-gray: hsl(201, 100%, 96%);
+  --cf7-light-gray: hsl(0, 0%, 80%);
+  --cf7-dark-gray: hsl(0, 0%, 65%);
+  --cf7-darker-gray: hsl(0, 0%, 20%);
+  --cf7-primary-light: hsl(201, 100%, 81%);
+  --cf7-primary: hsl(200, 100%, 61%);
+  --cf7-primary-dark: hsl(201, 100%, 36%);
+  --cf7-shadow: hsla(0, 0%, 0%, 0.1);
 
   /* Form settings */
-  --form-width: 800px;
-  --form-padding: 2rem;
-  --form-margin-Y: 4rem;
-  --form-margin-X: 1rem;
-  --form-shadow: 0 0 40px 0 var(--shadow);
-  --form-bg-color: var(--white);
+  --cf7-form-width: 800px;
+  --cf7-form-padding: 2rem;
+  --cf7-form-margin-Y: 4rem;
+  --cf7-form-margin-X: 1rem;
+  --cf7-form-shadow: 0 0 40px 0 var(--cf7-shadow);
+  --cf7-form-bg-color: var(--cf7-white);
 
   /* Form label settings */
-  --form-label-fs: 1rem;
-  --form-label-mb: 2px;
+  --cf7-form-label-fs: 1rem;
+  --cf7-form-label-mb: 2px;
 
   /* Form Submit button settings */
-  --submit-button-padding: 12px 24px;
-  --submit-button-border-radius: 50px;
-  --submit-button-width: 80%;
-  --submit-button-text: uppercase; /* capitalize | lowercase */
+  --cf7-submit-button-text: uppercase; /* capitalize | lowercase */
+  --cf7-submit-button-padding: 12px 24px;
+  --cf7-submit-button-border-radius: 50px;
+  --cf7-submit-button-width: 80%;
+  --cf7-submit-button-center: auto; /* 10px */
 
   /* Custom radio button and checkbox position setting */
-  --gender-circle: 2px;
-  --gender-check: 6px;
-  --apps-circle: 3px;
-  --apps-check: 4px;
+  --cf7-gender-circle: 2px;
+  --cf7-gender-check: 6px;
+  --cf7-apps-circle: 3px;
+  --cf7-apps-check: 4px;
 
   /* Custom radio button and checkbox Height and width setting */
-  --gender-apps-height: 30px;
-  --gender-apps-width: 65px;
-  --js-css-sports-padding: 5px 10px;
-  --js-css-sports-height: 40px;
-  --js-sports-height: 75px;
-  --css-apps-width: 100px;
-  --css-tab-dek-width: 125px;
+  --cf7-gender-apps-height: 30px;
+  --cf7-gender-apps-width: 65px;
+  --cf7-js-css-sports-padding: 5px 10px;
+  --cf7-js-css-sports-height: 40px;
+  --cf7-js-sports-height: 75px;
+  --cf7-css-apps-width: 100px;
+  --cf7-css-tab-dek-width: 125px;
 
   /* Switch setting */
-  --switch-container: var(--light-gray);
-  --switch-container-height: 25px;
-  --switch-container-width: 45px;
-  --switch-container-border-radius: 35px;
-  --switch-circle: var(--white);
-  --switch-circle-size: 18px;
-  --switch-circle-border-radius: 50%;
-  --switch-circle-top-position: 3px;
-  --switch-circle-left-position: 4px;
+  --cf7-switch-container: var(--cf7-light-gray);
+  --cf7-switch-container-height: 25px;
+  --cf7-switch-container-width: 45px;
+  --cf7-switch-container-border-radius: 35px;
+  --cf7-switch-circle: var(--cf7-white);
+  --cf7-switch-circle-size: 18px;
+  --cf7-switch-circle-border-radius: 50%;
+  --cf7-switch-circle-top-position: 3px;
+  --cf7-switch-circle-left-position: 4px;
 
-  --border: 1px solid var(--dark-gray);
-  --border-primary: 1px solid var(--primary);
+  --cf7-border-none: none;
+  --cf7-border: 1px solid var(--cf7-dark-gray);
+  --cf7-border-primary: 1px solid var(--cf7-primary);
+  --cf7-form-two-col-input-display: inline-block;
+  --cf7-form-two-col-input-width: 45%;
+  --cf7-form-two-col-input-margin: 8%;
 }
 /* For Tablet and desktop devices */
 @media screen and (min-width: 768px) {
   :root {
-    --form-padding: 3.125rem;
-    --form-margin-Y: 6rem;
-    --form-label-fs: 1.3125rem;
-    --form-label-mb: 5px;
-    --submit-button-padding: 15px 30px;
-    --js-css-sports-padding: 10px 20px;
-    --js-css-sports-height: 50px;
-    --js-sports-height: 90px;
+    --cf7-form-padding: 3.125rem;
+    --cf7-form-margin-Y: 6rem;
+    --cf7-form-label-fs: 1.3125rem;
+    --cf7-form-label-mb: 5px;
+    --cf7-submit-button-padding: 15px 30px;
+    --cf7-js-css-sports-padding: 10px 20px;
+    --cf7-js-css-sports-height: 50px;
+    --cf7-js-sports-height: 90px;
   }
 }
 /* Because form width is 800 pixels, margin-inline
@@ -539,15 +545,47 @@ auto does not work within 800 pixels devices.
 Now, it will use the default 1rem from mobile devices. */
 @media screen and (min-width: 830px) {
   :root {
-    --form-margin-X: auto;
+    --cf7-form-margin-X: auto;
   }
 }
+
+/* Standout form setting start */
+#wpcf7-f134-p113-o2 {
+  --cf7-border-color: hsl(195, 100%, 50%);
+  --cf7-primary: hsl(270, 50%, 40%);
+  --cf7-primary-dark: hsl(270, 50%, 30%);
+  --cf7-form-label-fs: 123;
+  --cf7-form-label-mb: 123;
+  --cf7-form-two-col-input-display: flex;
+  --cf7-form-two-col-input-width: 100%;
+  --cf7-form-two-col-input-margin: 0;
+
+  /* Form input setting */
+  --cf7-border: 1px solid var(--cf7-border-color);
+  --cf7-border-primary: 1px solid var(--cf7-primary);
+}
+
+#wpcf7-f134-p222-o1 {
+  --cf7-border-color: hsl(131, 100%, 50%);
+  --cf7-primary: hsl(66, 50%, 40%);
+  --cf7-primary-dark: hsl(66, 50%, 30%);
+  --cf7-form-label-fs: 123;
+  --cf7-form-label-mb: 123;
+  --cf7-form-two-col-input-display: flex;
+  --cf7-form-two-col-input-width: 100%;
+  --cf7-form-two-col-input-margin: 0;
+
+  /* Form input setting */
+  --cf7-border: 1px solid var(--cf7-border-color);
+  --cf7-border-primary: 1px solid var(--cf7-primary);
+}
+/* Standout form setting end */
 
 /* Theme specific codes */
 
 /* For Twenty Twenty-[<year>] theme start */
 .is-layout-constrained {
-  --wp--style--global--content-size: 100dvw;
+  --wp--style--global--content-size: 100vw;
   padding: 0;
 }
 /* For Twenty Twenty-[<year>] theme end */
@@ -556,20 +594,23 @@ Now, it will use the default 1rem from mobile devices. */
 }
 /* For Twenty Twenty-One theme */
 .wpcf7-form input.wpcf7-form-control.btn-primary:is([type="submit"]) {
-  background-color: var(--primary);
+  background-color: var(--cf7-primary);
+}
+.wpcf7-form input.wpcf7-form-control.btn-primary:is([type="submit"]):hover {
+  background-color: var(--cf7-primary-dark);
 }
 .theme-twentytwentyone {
-  --responsive--aligndefault-width: 100dvw;
-  --gender-circle: 6px;
-  --gender-check: 10px;
-  --apps-circle: 6px;
-  --apps-check: 7px;
+  --responsive--aligndefault-width: 100vw;
+  --cf7-gender-circle: 6px;
+  --cf7-gender-check: 10px;
+  --cf7-apps-circle: 6px;
+  --cf7-apps-check: 7px;
 }
 .theme-oceanwp {
-  --gender-circle: -1px;
-  --gender-check: 3px;
-  --apps-circle: -1px;
-  --apps-check: 1px;
+  --cf7-gender-circle: -1px;
+  --cf7-gender-check: 3px;
+  --cf7-apps-circle: -1px;
+  --cf7-apps-check: 1px;
 }
 .theme-neve .wpcf7-form input.wpcf7-form-control:not([type="submit"]):focus {
   box-shadow: none;
@@ -580,16 +621,16 @@ Now, it will use the default 1rem from mobile devices. */
 }
 /* Increase specificity */
 form.wpcf7-form {
-  margin-block: var(--form-margin-Y);
+  margin-block: var(--cf7-form-margin-Y);
 }
 /* Kadence theme end */
 .wpcf7-form {
-  padding: var(--form-padding);
-  box-shadow: var(--form-shadow);
-  max-width: var(--form-width);
-  margin-block: var(--form-margin-Y);
-  margin-inline: var(--form-margin-X);
-  background-color: var(--form-bg-color);
+  padding: var(--cf7-form-padding);
+  box-shadow: var(--cf7-form-shadow);
+  max-width: var(--cf7-form-width);
+  margin-block: var(--cf7-form-margin-Y);
+  margin-inline: var(--cf7-form-margin-X);
+  background-color: var(--cf7-form-bg-color);
 }
 .wpcf7-form p br {
   display: none;
@@ -597,40 +638,48 @@ form.wpcf7-form {
 .wpcf7-form p {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
   margin-bottom: 1.3125rem;
 }
+.wpcf7-form p:last-child {
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
 .wpcf7-form label {
-  color: var(--primary);
+  color: var(--cf7-primary);
   display: block;
-  font-size: var(--form-label-fs);
-  margin-bottom: var(--form-label-mb);
+  font-size: var(--cf7-form-label-fs);
+  margin-bottom: var(--cf7-form-label-mb);
 }
 .wpcf7-form .wpcf7-form-control-wrap {
   display: block;
   width: 100%;
 }
+
 .wpcf7-form input.wpcf7-form-control:not([type="submit"]) {
-  border: none;
-  border-bottom: var(--border);
+  border: var(--cf7-border-none);
+  border-bottom: var(--cf7-border);
   transition: border 0.3s linear;
   background-color: transparent;
   padding-block: 0;
   width: 100%;
 }
 .wpcf7-form input[type="submit"] {
-  border: none;
-  background-color: var(--primary);
-  color: var(--white);
-  text-transform: var(--submit-button-text);
+  border: var(--cf7-border-none);
+  background-color: var(--cf7-primary);
+  color: var(--cf7-white);
+  text-transform: var(--cf7-submit-button-text);
   letter-spacing: 2px;
-  margin-inline: auto;
-  width: var(--submit-button-width);
+  margin-inline: var(--cf7-submit-button-center);
+  width: var(--cf7-submit-button-width);
   transition: background-color 0.3s linear;
-  border-radius: var(--submit-button-border-radius);
-  padding: var(--submit-button-padding);
+  border-radius: var(--cf7-submit-button-border-radius);
+  padding: var(--cf7-submit-button-padding);
+  cursor: pointer;
 }
-.wpcf7-form .btn-primary:hover {
-  background-color: var(--primary-dark);
+.wpcf7-form input[type="submit"]:hover {
+  background-color: var(--cf7-primary-dark);
 }
 
 /* For select element */
@@ -658,7 +707,7 @@ Notes: Not valid syntax
   right: 1px;
   bottom: 1px;
   width: 30px;
-  background-color: var(--primary-light);
+  background-color: var(--cf7-primary-light);
 }
 .wpcf7-form [data-name="favorite-browser"]::after {
   top: 0;
@@ -669,13 +718,13 @@ Notes: Not valid syntax
   margin: auto;
   border-style: solid;
   border-width: 5px 5px 0 5px;
-  border-color: var(--white) transparent transparent transparent;
+  border-color: var(--cf7-white) transparent transparent transparent;
 }
 /* Creates triangle End */
 .wpcf7-form [data-name="favorite-browser"] select {
-  background-color: var(--lighter-gray);
-  color: var(--darker-gray);
-  border: 1px solid var(--primary-light);
+  background-color: var(--cf7-lighter-gray);
+  color: var(--cf7-darker-gray);
+  border: 1px solid var(--cf7-primary-light);
   height: 100%;
   width: 100%;
   cursor: pointer;
@@ -706,11 +755,11 @@ Notes: Not valid syntax
 :is(.cu-js-framework, .cu-css-framework, .cu-frequent-sports)
   :is(input[type="radio"], input[type="checkbox"])
   + :is(.wpcf7-list-item-label, span) {
-  color: var(--darker-gray);
+  color: var(--cf7-darker-gray);
   display: inline-block;
   cursor: pointer;
   transition: background-color 0.3s linear;
-  padding: var(--js-css-sports-padding);
+  padding: var(--cf7-js-css-sports-padding);
 }
 :is(
     .cu-gender,
@@ -728,22 +777,22 @@ Notes: Not valid syntax
 }
 :is(.cu-gender, .cu-frequent-apps)
   :is(input[type="radio"], input[type="checkbox"]) {
-  height: var(--gender-apps-height);
+  height: var(--cf7-gender-apps-height);
 }
 .cu-gender input[type="radio"] {
-  width: var(--gender-apps-width);
+  width: var(--cf7-gender-apps-width);
 }
 :is(.cu-js-framework, .cu-css-framework, .cu-frequent-sports)
   :is(input[type="radio"], input[type="checkbox"]) {
-  height: var(--js-css-sports-height);
+  height: var(--cf7-js-css-sports-height);
 }
 :is(.cu-css-framework, .cu-frequent-apps)
   :is(input[type="radio"], input[type="checkbox"]) {
-  width: var(--css-apps-width);
+  width: var(--cf7-css-apps-width);
 }
 :is(.cu-js-framework, .cu-frequent-sports)
   :is(input[type="radio"], input[type="checkbox"]) {
-  width: var(--js-sports-height);
+  width: var(--cf7-js-sports-height);
 }
 :is(.cu-gender, .cu-frequent-apps)
   :is(input[type="radio"], input[type="checkbox"])
@@ -770,75 +819,76 @@ Notes: Not valid syntax
 :is(.cu-js-framework, .cu-css-framework, .cu-frequent-sports)
   :is(input[type="radio"], input[type="checkbox"]):checked
   + :is(.wpcf7-list-item-label, span) {
-  color: var(--white);
-  background-color: var(--primary);
+  color: var(--cf7-white);
+  background-color: var(--cf7-primary);
 }
 .wpcf7-form input.wpcf7-form-control:not([type="submit"]):focus,
 .wpcf7-form input[type="submit"]:active {
-  border: none;
+  border: var(--cf7-border-none);
   outline: none;
 }
 .wpcf7-form input.wpcf7-form-control:not([type="submit"]):focus {
-  border-bottom: var(--border-primary);
+  border-bottom: var(--cf7-border-primary);
 }
 /* Radio and checkbox COMMON PROPERTY end */
 
 /* For gender */
-.cu-gender input[type="radio"] + span::before {
+.cu-gender input[type="radio"] + span::before,
+.cu-gender input[type="radio"] + span::after {
   display: inline-block;
+  border-radius: 100%;
+}
+.cu-gender input[type="radio"] + span::before {
   width: 18px;
   height: 18px;
   left: 0;
-  top: var(--gender-circle);
-  border: var(--border);
-  border-radius: 100%;
-  background-color: var(--white);
+  top: var(--cf7-gender-circle);
+  border: var(--cf7-border);
+  background-color: var(--cf7-white);
 }
 .cu-gender input[type="radio"] + span::after {
-  display: inline-block;
   width: 10px;
   height: 10px;
-  top: var(--gender-check);
+  top: var(--cf7-gender-check);
   left: 4px;
   opacity: 0;
-  background-color: var(--primary);
-  border-radius: 100%;
+  background-color: var(--cf7-primary);
   transition: background-color 0.2s linear;
 }
 
 /* For js framework */
 .cu-js-framework input[type="radio"] + .wpcf7-list-item-label {
-  background-color: var(--lighter-gray);
-  border: var(--border-primary);
+  background-color: var(--cf7-lighter-gray);
+  border: var(--cf7-border-primary);
 }
 
 /* For css framework */
 .cu-css-framework {
-  background-color: var(--lighter-gray);
-  border: var(--border-primary);
+  background-color: var(--cf7-lighter-gray);
+  border: var(--cf7-border-primary);
   padding: 5px 10px;
 }
 
 /* For frequent apps */
 .cu-frequent-apps input[type="checkbox"] + span::before {
   left: 0;
-  top: var(--apps-circle);
+  top: var(--cf7-apps-circle);
   width: 18px;
   height: 18px;
-  border: var(--border);
+  border: var(--cf7-border);
   border-radius: 3px;
-  background-color: var(--white);
+  background-color: var(--cf7-white);
 }
 .cu-frequent-apps input[type="checkbox"] + span::after {
   content: "\f00c";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   position: absolute;
-  top: var(--apps-check);
+  top: var(--cf7-apps-check);
   left: 3px;
   font-size: 14px;
   line-height: 1;
-  color: var(--primary);
+  color: var(--cf7-primary);
   opacity: 0;
   transform: scale(0);
   transition: background-color 0.2s linear;
@@ -849,19 +899,19 @@ Notes: Not valid syntax
 
 /* For sports */
 .cu-frequent-sports input[type="checkbox"] + span {
-  background-color: var(--lighter-gray);
-  border: var(--border-primary);
+  background-color: var(--cf7-lighter-gray);
+  border: var(--cf7-border-primary);
 }
 
 /* For switch */
 .wpcf7-form .switch ~ .wpcf7-form-control-wrap {
   position: relative;
-  width: var(--switch-container-width);
-  height: var(--switch-container-height);
+  width: var(--cf7-switch-container-width);
+  height: var(--cf7-switch-container-height);
 }
 .cu-acceptance input[type="checkbox"] {
-  width: var(--switch-container-width);
-  height: var(--switch-container-height);
+  width: var(--cf7-switch-container-width);
+  height: var(--cf7-switch-container-height);
   top: 0;
   left: 0;
 }
@@ -872,25 +922,33 @@ Notes: Not valid syntax
   left: 0;
   right: 0;
   bottom: 0;
-  color: var(--switch-container);
-  background-color: var(--switch-container);
-  border-radius: var(--switch-container-border-radius);
+  color: var(--cf7-switch-container);
+  background-color: var(--cf7-switch-container);
+  border-radius: var(--cf7-switch-container-border-radius);
   transition: background-color 0.3s linear;
 }
 .cu-acceptance .wpcf7-list-item-label::before {
-  height: var(--switch-circle-size);
-  width: var(--switch-circle-size);
-  left: var(--switch-circle-left-position);
-  top: var(--switch-circle-top-position);
-  background-color: var(--switch-circle);
-  border-radius: var(--switch-circle-border-radius);
+  height: var(--cf7-switch-circle-size);
+  width: var(--cf7-switch-circle-size);
+  left: var(--cf7-switch-circle-left-position);
+  top: var(--cf7-switch-circle-top-position);
+  background-color: var(--cf7-switch-circle);
+  border-radius: var(--cf7-switch-circle-border-radius);
   transition: background-color 0.3s linear;
 }
 .cu-acceptance input[type="checkbox"]:checked + .wpcf7-list-item-label {
-  background-color: var(--primary);
+  background-color: var(--cf7-primary);
 }
 .cu-acceptance input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
   transform: translateX(18px);
+}
+
+/* For textarea if exist */
+textarea.cu-question {
+  width: 100%;
+}
+textarea.cu-question:focus-visible {
+  outline: none;
 }
 
 /* For foldable phones */
@@ -915,17 +973,16 @@ Notes: Not valid syntax
 /* For tablet and desktop */
 @media screen and (min-width: 768px) {
   .wpcf7-form > :is(p:nth-child(2), p:nth-child(3)) {
-    display: inline-block;
-    width: 45%;
+    display: var(--cf7-form-two-col-input-display);
+    width: var(--cf7-form-two-col-input-width);
   }
   .wpcf7-form > p:nth-child(2) {
-    margin-right: 8%;
+    margin-right: var(--cf7-form-two-col-input-margin);
   }
   .cu-css-framework input[type="radio"] {
-    width: var(--css-tab-dek-width);
+    width: var(--cf7-css-tab-dek-width);
   }
 }
-
 ```
 
 ## Task 6: The Magic of Live AJAX WooCommerce Product Search
